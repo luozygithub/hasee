@@ -1,0 +1,32 @@
+getdata([
+    {
+        "img":"http://www.hasee.net/uploadfiles/images/2015/7/20150715071520180.png",
+        "title":"至强王者",
+        "name":"超级战神",
+        "good1":"战神Z7-KP7GE",
+        "good2":"战神Z7M-KP5SC",
+        "good3":"战神Z7-KP7GE",
+        "good4":"战神Z7M-KP5SC"
+
+    },
+    {
+        "img":"http://www.hasee.net/uploadfiles/images/2015/7/20150715071520180.png",
+        "title":"至强王者",
+        "name":"超级战神",
+        "good1":"战神Z7-KP7GE",
+        "good2":"战神Z7M-KP5SC",
+        "good3":"战神Z7-KP7GE",
+        "good4":"战神Z7M-KP5SC"
+
+    },
+    {
+        "img":"http://www.hasee.net/uploadfiles/images/2015/7/20150715071520180.png",
+        "title":"至强王者",
+        "name":"超级战神",
+        "good1":"战神Z7-KP7GE",
+        "good2":"战神Z7M-KP5SC",
+        "good3":"战神Z7-KP7GE",
+        "good4":"战神Z7M-KP5SC"
+
+    }
+]);
