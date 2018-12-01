@@ -142,3 +142,96 @@ $(function(){
     })
 //end main
 })
+
+
+//main floor 数据
+// floor0
+$(function(){
+    $.ajax({
+        url:"../json/floor0.json",
+        success:function(data){
+            for(let i = 0; i < data[0].length; i++){
+                if(i<2){
+                    $(`<li class="bgcolor1 label_news"><a target="_blank" href="">
+                    <img src="${data[0][i].img}">
+                <div class="star_d1">
+                    <h3>${data[0][i].title}</h3>
+                    <p>${data[0][i].describe}</p>
+                    <p>商城价：<span>￥${data[0][i].price}</span></p>
+                </div></a>
+                </li>`).appendTo($('.star_ul1'));
+                }else{
+                    $(`<li class="bgcolor3 label_news"><a target="_blank" href="">
+                    <img src="${data[0][i].img}">
+                    <div class="star_d2">
+                        <h3>${data[0][i].title}</h3>
+                        <p>${data[0][i].describe}</p>
+                        <p><span>￥${data[0][i].price}</span></p>
+                    </div></a>
+                    </li>`).appendTo($('.star_ul2'));
+                }
+            }
+        },
+        error:function(msg){
+            alert("error" + msg);
+        }
+        
+    })
+})
+// floor1
+$(function(){
+   
+    $.ajax({
+        url:"../json/floor1.json",
+        success:function(data){
+            //part1
+            for(let i = 0; i < data.part1.length; i++){
+                $(` <li class="label_bargains">
+                <a target="_blank" href="">
+                    <img src="${data.part1[i].img}">
+                    <div class="notebook_d1">
+                        <h3>${data.part1[i].title}</h3>
+                        <h4>&nbsp;</h4><p>${data.part1[i].describe}</p>
+                        <span>￥${data.part1[i].price}</span>
+                    </div>
+                </a>
+            </li>`).appendTo($('.notebook_l .notebook_li1 ul'));
+            }
+            
+            //part2
+            for(let i = 0; i < data.part2.length; i++){
+                $(`
+                <a target="_blank" href="">
+                    <div class="spaimg1">
+                        <img src="${data.part2[i].img}">
+                    </div>
+                    <div class="notebook_d2">
+                        <h3>${data.part2[i].title}</h3>
+                        <p>${data.part2[i].describe}</p>
+                        <span>￥${data.part2[i].price}</span>
+                    </div>
+                </a>
+            `).appendTo($('.notebook_l > ol .li' + (i+1)));
+            }
+            //part3
+            for(let i = 0; i < data.part3.length; i++){
+                $(` <li>
+                <a target="_blank" href="">
+                    <span>${i+1}</span>
+                    <img src="${data.part3[i].img}">
+                   
+                    <h3>${data.part3[i].title}</h3>
+                    <h4>${data.part3[i].price}</h4>
+                    <p>月销量<b>${data.part3[i].sales}</b></p>
+                </a>
+            </li>`).appendTo($(".notebook .notebook_r ul"));
+            }
+        },
+        error:function(msg){
+            alert("error" + msg);
+        }
+    })
+    
+    
+})
+//end main floor 数据

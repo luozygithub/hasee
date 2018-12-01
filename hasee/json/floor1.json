@@ -1,0 +1,79 @@
+{
+    "part1":[
+        {
+            "title":"战神Z7-CP7S2",
+            "img":"http://www.hasee.net/uploadfiles/images/2018/8/20180814044213182.jpg",
+            "describe":"天生的性能怪兽",
+            "price":"9599"
+        },
+        {
+            "title":"战神Z7-7S2",
+            "img":"http://www.hasee.net/uploadfiles/images/2018/9/20180913113214163.jpg",
+            "describe":"吃鸡小能手",
+            "price":"7699"
+        }
+    ],
+    "part2":[
+        {
+            "title":"KING BOOK",
+            "img":"http://www.hasee.net/uploadfiles/images/2018/7/20180705054315695.png",
+            "describe":"八代i7高性能处理器",
+            "price":"7599"
+        },
+        {
+            "title":"KING BOOK",
+            "img":"http://www.hasee.net/uploadfiles/images/2018/7/20180705054315695.png",
+            "describe":"八代i7高性能处理器",
+            "price":"7599"
+        },
+        {
+            "title":"KING BOOK",
+            "img":"http://www.hasee.net/uploadfiles/images/2018/7/20180705054315695.png",
+            "describe":"八代i7高性能处理器",
+            "price":"7599"
+        },
+        {
+            "title":"KING BOOK",
+            "img":"http://www.hasee.net/uploadfiles/images/2018/5/20180503065554972.gif",
+            "describe":"八代i7高性能处理器",
+            "price":"7599"
+        }
+    ],
+    "part3":[
+        {
+            "title":"KING BOOK",
+            "img":"http://www.hasee.net/uploadfiles/images/2018/5/20180503065554972.gif",
+            "describe":"八代i7高性能处理器",
+            "price":"7599",
+            "sales":20
+        },
+        {
+            "title":"KING BOOK",
+            "img":"http://www.hasee.net/uploadfiles/images/2018/5/20180503065554972.gif",
+            "describe":"八代i7高性能处理器",
+            "price":"7599",
+            "sales":52
+        },
+        {
+            "title":"KING BOOK",
+            "img":"http://www.hasee.net/uploadfiles/images/2018/5/20180503065554972.gif",
+            "describe":"八代i7高性能处理器",
+            "price":"7599",
+            "sales":78
+        },
+        {
+            "title":"KING BOOK",
+            "img":"http://www.hasee.net/uploadfiles/images/2018/5/20180503065554972.gif",
+            "describe":"八代i7高性能处理器",
+            "price":"7599",
+            "sales":65
+        },
+        {
+            "title":"KING BOOK",
+            "img":"http://www.hasee.net/uploadfiles/images/2018/5/20180503065554972.gif",
+            "describe":"八代i7高性能处理器",
+            "price":"7599",
+            "sales":50
+        }
+    ]
+}
