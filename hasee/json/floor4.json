@@ -1,0 +1,31 @@
+[
+    {
+        "id":1,
+        "title":"新款神州双肩背包",
+        "describe":"舒适透气休闲学生电脑背包",
+        "price":"199.00",
+        "img":"http://www.hasee.net/uploadfiles/images/2016/8/2016082402282496.png"
+
+    },
+    {
+        "id":2,
+        "title":"战神-大鼠标垫",
+        "describe":"图案随机，不支持选择",
+        "price":"49.00",
+        "img":"http://www.hasee.net/uploadfiles/images/2018/2/20180227042523037.jpg"
+    },
+    {
+        "id":3,
+        "title":"战神-键盘",
+        "describe":"炫彩背光 畅玩游戏",
+        "price":"69.00",
+        "img":"http://www.hasee.net/uploadfiles/images/2018/5/2018052103494826.jpg"
+    },
+    {
+        "id":4,
+        "title":"战神-鼠标",
+        "describe":"战神-6D游戏鼠标",
+        "price":"128.00",
+        "img":"http://www.hasee.net/uploadfiles/images/2016/9/20160901101119085.jpg"
+    }
+]

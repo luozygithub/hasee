@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>神州官方商城</title>
-    <link rel="stylesheet" href="../css/index.css">
-  
-    <!-- <script src="../js/jquery-1.10.1.min.js"></script>
-    <script src="../js/index.js"></script> -->
-    <script src="../js/require.js" aysnc defer data-main = "../js/indexMain"></script>
+    <title>战神专区</title>
+    <link rel="stylesheet" href="../css/prefecture.css">
+    <!-- <script src="../js/jquery-1.11.3.js"></script>
+    <script src="../js/public.js"></script>
+    <script src="../js/prefecture.js"></script> -->
+    <script src="../js/require.js" async="true" defer data-main = "../js/prefectureMain"></script>
 </head>
 
 <body>
@@ -30,6 +30,7 @@
                 <li>|<a href="">销售网点</a></li>
                 <li>|<a href="">服务网点</a></li>
             </ul>
+
         </nav>
     </div>
     <!-- header -->
@@ -63,7 +64,7 @@
                             <li class="li1"><a href="">笔记本</a>
                                 <div class="details">
                                     <ul class='ul1'>
-
+                        +
                                     </ul>
                                 </div>
                             </li>
@@ -118,170 +119,40 @@
                 <li><a href="">PCpad</a></li>
                 <li><a href="">今日秒杀</a></li>
                 <li><a href="">服务支持</a></li>
-
             </ul>
         </div>
     </div>
-    <!-- banner -->
-    <div class="banner">
-        <div class="img-box">
-            <img class='img1' src="../images/banner1.jpg" banner">
-            <img class='img2' src="../images/banner2.jpg" banner">
-            <img class='img3' src="../images/banner3.jpg" banner">
-            <img class='img4' src="../images/banner4.jpg" banner">
-        </div>
-        <ul class="img-btn">
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-        </ul>
-    </div>
+    <!-- end nav -->
     <!-- main -->
     <div class="main">
-        <div class="idx_top">
+        <div class="title1">
+            <a href="javascript:">首页 &gt; <span searchtype="category">笔记本<i></i></span></a>
+            <p class="search2">
+                <input type="button" onclick="GetSearchInfo();" value=""><input type="text" class="pSearTxt"
+                    placeholder="在当前条件下搜索">
+            </p>
+        </div>
+        <div class="search_terms">
             <ul>
-                <li><a href="prefecture1.html"></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
+            
             </ul>
         </div>
-        <!-- floor start -->
-        <div class="floor0">
-            <div class="star_single ">
-                <h2 class="title5">明星单品</h2>
-                <ul class="star_ul1">
-
-                </ul>
-                <ul class="star_ul2">
-                </ul>
-            </div>
+        <div class="reorder">
+            <p class="reo_p1"><a href="javascript:" class="hover" ordertype="">综合</a><a href="javascript:" ordertype="sales">销量</a><a href="" ordertype="price">价格</a><a href="" ordertype="time">时间</a></p>
+            <span>价格</span><input type="text" id="txtMinPrice" placeholder="最低价">
+            -
+            <input type="text" id="txtMaxPrice" placeholder="最高价">
+            <input type="button" id="btnSearchPrice" value="确定">
+            <p class="reo_p2">共48件商品 <a href="" class="reo_prev">&lt;</a><span>1/2</span> <a href="" class="reo_next">&gt;</a></p>
         </div>
-
-        <div class="floor1">
-            <div class="notebook">
-                <h2 class="title5 menuicon_0"><a href="" target="_blank">笔记本</a>
-                    <a class="more" href="" target="_blank">更多&gt;&gt;</a>
-                </h2>
-                <div class="notebook_l">
-                    <ol>
-                        <li class="notebook_li1" id="notebook_slide0">
-                            <ul style="width: 1242px; left: 0">
-
-                            </ul>
-                            <ol>
-                                <li class="btn1">1</li>
-                                <li class="btn2">2</li>
-                            </ol>
-                        </li>
-                        <li class="label_bargains li1">
-
-                        </li>
-                        <li class="label_bargains li2">
-
-                        </li>
-                        <li class="label_bargains li3">
-
-                        </li>
-                        <li class="label_bargains li4">
-
-                        </li>
-                    </ol>
-                </div>
-                <div class="notebook_r">
-                    <h2>HOT热销商品排行</h2>
-                    <ul class="notebook_rul">
-
-
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="floor2">
-            <div class="pcpad">
-                <h2 class="title5 menuicon_1"><a href="" target="_blank">PCpad平板电脑</a>
-                    <a class="more" href="" target="_blank">更多&gt;&gt;</a>
-                </h2>
-                <div class="pcpad_box">
-                    <ul style="width: 1240px; left: 0px;">
-
-                    </ul>
-                    <ol>
-                        <li class="active">1</li>
-                        <li class="">2</li>
-                    </ol>
-                </div>
-            </div>
-        </div>
-        <div class="floor3">
-            <div class="around">
-                <h2 class="title5 menuicon_2"><a href="" target="_blank">台式机</a>
-                    <a class="more" href="" target="_blank">更多&gt;&gt;</a>
-                </h2>
-            </div>
-        </div>
-        <div class="floor4">
-            <div class="around">
-                <h2 class="title5"><a href="" target="_blank">周边</a>
-                    <a class="more" href="" target="_blank">更多&gt;&gt;</a>
-                </h2>
-                <ul>
-                    <!-- <li class="label_news li1">
-                        <a target="_blank" href="http://www.hasee.net/product/prodetail.aspx?id=10488">
-                            <div class="ardimg">
-                                <img width="200" heigth="200" src=""></div>
-                            <div class="around_d1">
-                                <h3>新款神舟双肩背包</h3>
-                                <p>舒适透气 休闲学生电脑背包</p><span>￥199.00</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="label_bargains"><a target="_blank" href="http://www.hasee.net/product/prodetail.aspx?id=10769">
-                            <div class="ardimg"><img width="200" heigth="200" src=""></div>
-                            <div class="around_d1">
-                                <h3>战神-大鼠标垫</h3>
-                                <p>图案随机，不支持选择</p><span>￥49.00</span>
-                            </div>
-                        </a></li>
-                    <li class="label_hits"><a target="_blank" href="">
-                            <div class="ardimg"><img width="200" heigth="200" src="/uploadfiles/images/2018/5/2018052103494826.jpg"></div>
-                            <div class="around_d1">
-                                <h3>HASEE-背光键盘</h3>
-                                <p>炫彩背光、畅玩游戏</p><span>￥69.00</span>
-                            </div>
-                        </a></li>
-                    <li class="label_hits"><a target="_blank" href="http://www.hasee.net/product/prodetail.aspx?id=10384">
-                            <div class="ardimg"><img width="200" heigth="200" src="/uploadfiles/images/2016/9/20160901101119085.jpg"></div>
-                            <div class="around_d1">
-                                <h3>战神-6D游戏鼠标</h3>
-                                <p>战神-6D游戏鼠标</p><span>￥128.00</span>
-                            </div>
-                        </a></li> -->
-                </ul>
-
-            </div>
-        </div>
-        <!-- floor end -->
-        <!-- side left start -->
-        <div class="side" style="display: block; top: 180px;">
+        <div class="product_list">
             <ul>
-                <li><a href="javascript:" class="sidestar">明星<br>单品</a></li>
-                <li><a href="javascript:" class="sideleftitem">笔记本</a></li>
-                <li><a href="javascript:" class="sideleftitem">PCpad平板电脑</a></li>
-
-                <li><a href="javascript:" class="sideleftitem">台式机</a></li>
-
-                <li><a href="javascript:" class="sideleftitem">周边</a></li>
-
-                <li><a href="#" class="sideqq"><img src="../images/qq.png">客服</a></li>
-                <li><a href="" class="sidetop"><img src="../images/top.png"></a></li>
-
+            
             </ul>
         </div>
-        <!-- side left end -->
+        <!-- product -->
     </div>
-    <!-- main end -->
+    <!-- end main -->
     <!-- footer -->
     <div class="footerBox">
         <div class="footer">
@@ -324,7 +195,7 @@
                     <ol>
                         <li><a target="_blank" href="">神舟电脑京东官方旗舰店</a></li>
                         <li><a target="_blank" href="">神舟电脑天猫旗舰店</a></li>
-                        <li><a target="_blank" href="https://haseexz.tmall.com/">神舟新舟专卖店</a></li>
+                        <li><a target="_blank" href="">神舟新舟专卖店</a></li>
                     </ol>
                 </li>
 
@@ -370,6 +241,7 @@
             <p>在线客服</p>
         </div>
     </div>
+
 </body>
 
 </html>
