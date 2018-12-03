@@ -10,7 +10,7 @@
     <!-- <script src="../js/jquery-1.11.3.js"></script>
     <script src="../js/public.js"></script>
     <script src="../js/prefecture.js"></script> -->
-    <script src="../js/require.js" async="true" defer data-main = "../js/prefectureMain"></script>
+    <script src="../js/require.js" async="true" defer data-main="../js/prefectureMain"></script>
 </head>
 
 <body>
@@ -64,7 +64,7 @@
                             <li class="li1"><a href="">笔记本</a>
                                 <div class="details">
                                     <ul class='ul1'>
-                        +
+                                        +
                                     </ul>
                                 </div>
                             </li>
@@ -134,24 +134,57 @@
         </div>
         <div class="search_terms">
             <ul>
-            
+
             </ul>
         </div>
         <div class="reorder">
-            <p class="reo_p1"><a href="javascript:" class="hover" ordertype="">综合</a><a href="javascript:" ordertype="sales">销量</a><a href="" ordertype="price">价格</a><a href="" ordertype="time">时间</a></p>
+            <p class="reo_p1"><a href="javascript:" class="hover" ordertype="">综合</a><a href="javascript:" ordertype="sales">销量</a><a
+                    href="" ordertype="price">价格</a><a href="" ordertype="time">时间</a></p>
             <span>价格</span><input type="text" id="txtMinPrice" placeholder="最低价">
             -
             <input type="text" id="txtMaxPrice" placeholder="最高价">
             <input type="button" id="btnSearchPrice" value="确定">
             <p class="reo_p2">共48件商品 <a href="" class="reo_prev">&lt;</a><span>1/2</span> <a href="" class="reo_next">&gt;</a></p>
         </div>
-        <div class="product_list">
+        <!-- product list -->
+        <div class="product_list clear">
             <ul>
-            
+
             </ul>
         </div>
-        <!-- product -->
+        <!-- main product list end-->
+        <!-- 分页 -->
+        <div class="pages">
+            <a href="" class="pages_prev">&lt;</a>
+            <a href="prefecture1.html?page=1" >1</a>
+            <a href="prefecture1.html?page=2">2</a>
+            <a href="" class="pages_next">&gt;</a>
+            <span>共2页，跳转到:</span>
+            <input id="pageindex" type="text">
+            <input type="button" id="btngopage" value="确定">
+        </div>
+        <!-- 购物车 -->
+        
     </div>
+    <div class="shopCar">
+        <div class="sc_right">
+            <div class="sc_pic">
+                <span>结算</span>
+                <!-- 购物车内商品的数量 -->
+                <div class="sc_num">
+                    0
+                </div>
+            </div>
+    
+            <ul>
+                
+            </ul>
+            <div class="clearShopCar">
+                <button id="clearBtn">清空</button>
+            </div>
+        </div>
+    </div>
+
     <!-- end main -->
     <!-- footer -->
     <div class="footerBox">

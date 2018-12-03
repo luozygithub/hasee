@@ -461,7 +461,10 @@ a {
   -webkit-border-radius: 4px;
   border-radius: 4px; }
 
-input[type=button], input[type=radio], input[type=checkbox], label {
+input[type=button],
+input[type=radio],
+input[type=checkbox],
+label {
   cursor: pointer; }
 
 .reorder .reo_p2 {
@@ -572,6 +575,143 @@ input[type=button], input[type=radio], input[type=checkbox], label {
 .product_list td {
   width: 50%;
   border: 1px solid #ddd; }
+
+.pages {
+  height: 30px;
+  margin: 38px auto;
+  text-align: center; }
+
+a.pages_prev,
+a.pages_next {
+  font-size: 17px; }
+
+.pages a {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0 5px;
+  vertical-align: middle;
+  font-family: simsun;
+  border: 1px solid #ddd;
+  background: #f9fafb;
+  letter-spacing: 0; }
+
+.pages a:hover,
+.pages a.cur {
+  background: #ddd; }
+
+a.pages_prev,
+a.pages_next {
+  font-size: 17px; }
+
+.pages span {
+  font-size: 14px;
+  margin-left: 30px; }
+
+.pages input[type=text] {
+  width: 48px;
+  height: 28px;
+  margin: 0 5px;
+  border: 1px solid #ddd;
+  text-align: center;
+  outline: none; }
+
+.pages input[type=button] {
+  width: 50px;
+  height: 30px;
+  margin: 0 5px;
+  border: 1px solid #ddd;
+  background: #fafafc; }
+
+.sc_right {
+  position: fixed;
+  width: 270px;
+  border-left: 2px solid #b6b6b6;
+  right: -270px;
+  top: 0;
+  height: 100%;
+  background: #99CCCC; }
+
+.sc_right .clearShopCar {
+  position: absolute;
+  right: 20px;
+  bottom: 10%; }
+
+.sc_right .clearShopCar button {
+  width: 200px;
+  height: 36px;
+  font-size: 26px;
+  cursor: pointer;
+  background: #99CCFF; }
+
+.sc_pic {
+  width: 30px;
+  height: 100px;
+  padding: 4px 6px;
+  background: url(../images/rightShopCar.jpg) #99CCFF no-repeat;
+  background-size: 100% 36px;
+  position: relative;
+  left: -50px;
+  top: 36%;
+  margin-top: -24px;
+  border: 1px solid #99CCFF; }
+
+.sc_pic span {
+  display: block;
+  width: 30px;
+  font-size: 20px;
+  margin-top: 36px;
+  text-align: center;
+  color: black; }
+
+.sc_num {
+  position: absolute;
+  padding: 2px 8px;
+  border-radius: 50%;
+  background: red;
+  color: #fff;
+  top: -8px;
+  left: 20px;
+  z-index: 1; }
+
+.sc_goodsPic {
+  width: 80px;
+  height: 80px;
+  border: 1px solid #b6b6b6;
+  float: left; }
+
+.sc_goodsPic img {
+  width: 100%;
+  height: 100%; }
+
+.sc_goodsTitle {
+  line-height: 40px;
+  color: #999;
+  margin-left: 20px;
+  float: left; }
+
+.sc_goodsBtn {
+  background: #fc1934;
+  color: #fff;
+  text-align: center;
+  float: left;
+  line-height: 30px;
+  width: 60px;
+  height: 30px;
+  margin-left: 20px;
+  cursor: pointer; }
+
+.sc_goodsNum {
+  float: left;
+  line-height: 30px;
+  font-size: 10px;
+  margin-left: 5px; }
+
+.sc_right li {
+  height: 100px; }
 
 /* footer */
 .footerBox {

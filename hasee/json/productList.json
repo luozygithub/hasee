@@ -94,5 +94,30 @@
         "img":"http://www.hasee.net/uploadfiles/images/2018/5/20180503065554972.gif",
         "price":"7399.00",
         "comment":0
+    },
+    {   
+        "id":12,
+        "title":"战神Z7-KP7GE",
+        "tip":"i7-8750H/GeForce® GTX1060 6G",
+        "img":"http://www.hasee.net/uploadfiles/images/2018/5/20180503065554972.gif",
+        "price":"7399.00",
+        "comment":0
+    },
+    {   
+        "id":13,
+        "title":"战神Z7-KP7GE",
+        "tip":"i7-8750H/GeForce® GTX1060 6G",
+        "img":"http://www.hasee.net/uploadfiles/images/2018/5/20180503065554972.gif",
+        "price":"7399.00",
+        "comment":0
+    },
+    {   
+        "id":14,
+        "title":"战神Z7-KP7GE",
+        "tip":"i7-8750H/GeForce® GTX1060 6G",
+        "img":"http://www.hasee.net/uploadfiles/images/2018/5/20180503065554972.gif",
+        "price":"7399.00",
+        "comment":0
     }
+    
 ]
