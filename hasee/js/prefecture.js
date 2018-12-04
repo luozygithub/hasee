@@ -245,6 +245,7 @@ define(['jquery', 'jquery-cookie'], function ($) {
             $(".sc_right .sc_num").html(0);
             $('.shopCar .sc_right ul').html("");
             shop_car();
+            history.go(0);
         })
 
     }
