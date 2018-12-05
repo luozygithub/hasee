@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>K670D</title>
-    <link rel="stylesheet" href="../css/product.css">
-    <!-- <script src="../js/jquery-1.10.1.min.js"></script>
-    <script src="../js/public.js"></script> -->
-    <script src="../js/require.js" async degfer data-main="../js/productMain"></script>
+    <title>战神专区</title>
+    <link rel="stylesheet" href="../css/prefecture.css">
+    <!-- <script src="../js/jquery-1.11.3.js"></script>
+    <script src="../js/public.js"></script>
+    <script src="../js/prefecture.js"></script> -->
+    <script src="../js/require.js" async="true" defer data-main="../js/prefectureMain"></script>
 </head>
 
 <body>
@@ -63,16 +64,7 @@
                             <li class="li1"><a href="">笔记本</a>
                                 <div class="details">
                                     <ul class='ul1'>
-                                        <!-- <li>
-                                            <div class='detailImg'>
-                                                <img src="http://www.hasee.net/uploadfiles/images/2015/7/20150715071520180.png" alt="">
-                                            </div>
-                                            <h4>qweqwe</h4>
-                                            <h5>请问请问</h5>
-                                            <b>请问请问</b>
-                                            <b>请问请问</b>
-                                            <b>请问请问</b>
-                                       </li> -->
+                                        +
                                     </ul>
                                 </div>
                             </li>
@@ -122,7 +114,7 @@
                         </ol>
                     </div>
                 </li>
-                <li><a href="">首页</a></li>
+                <li><a href="index.html">首页</a></li>
                 <li><a href="">新品推荐</a></li>
                 <li><a href="">PCpad</a></li>
                 <li><a href="">今日秒杀</a></li>
@@ -131,133 +123,69 @@
         </div>
     </div>
     <!-- end nav -->
+    <!-- main -->
     <div class="main">
-        <div class="title2">
-            <a href="index.html">首页</a> &gt;
-            <span>
-                <a target="_blank" href="../html/prefecture1.html">笔记本</a>
-            </span>
-            &gt;<span>
-
-            </span>
-            <a target="_blank" href="prefecture1.html?page=1">
-                战神系列
-            </a>&gt; 
-            <!-- <span>战神Z7M-KP5GC</span> -->
+        <div class="title1">
+            <a href="javascript:">首页 &gt; <span searchtype="category">笔记本<i></i></span></a>
+            <p class="search2">
+                <input type="button" onclick="GetSearchInfo();" value=""><input type="text" class="pSearTxt"
+                    placeholder="在当前条件下搜索">
+            </p>
         </div>
-        <div class="prod_d1">
-            <div class="prod_i_show">
-                <div id="MagnifierWrap2">
-                    <div class="MagnifierMain">
-                        
-                    </div>
-                    <span class="spe_leftBtn">&lt;</span>
-                    <span class="spe_rightBtn on">&gt;</span>
-                    <div class="spec-items">
-                        <ul>
-                            <li class="on" name="1"></li>
-                            <li name="2"></li>
-                            <li name="3"></li>
-                            <li name="4"></li>
-                            <li name="5"></li>
-                        </ul>
-                    </div>
-                    <div class="magnifying_glass_box"></div>
-                    <div class="magnifying_glass">
-                        <li class="on" name="1"></li>
-                        <li name="2"></li>
-                        <li name="3"></li>
-                        <li name="4"></li>
-                        <li name="5"></li>
-                    </div>
-                </div>
+        <div class="search_terms">
+            <ul>
 
-                <div class="prod_other">
+            </ul>
+        </div>
+        <div class="reorder">
+            <p class="reo_p1"><a href="javascript:" class="hover" ordertype="">综合</a><a href="javascript:" ordertype="sales">销量</a><a
+                    href="" ordertype="price">价格</a><a href="" ordertype="time">时间</a></p>
+            <span>价格</span><input type="text" id="txtMinPrice" placeholder="最低价">
+            -
+            <input type="text" id="txtMaxPrice" placeholder="最高价">
+            <input type="button" id="btnSearchPrice" value="确定">
+            <p class="reo_p2">共48件商品 <a href="" class="reo_prev">&lt;</a><span>1/2</span> <a href="" class="reo_next">&gt;</a></p>
+        </div>
+        <!-- product list -->
+        <div class="product_list clear">
+            <ul>
 
-                    <a href="" class="drive">&nbsp;&nbsp;驱动下载</a>
-
-                    <a href="#" class="bdsharebuttonbox bds_more  a_share prod_share bdshare-button-style0-16" data-cmd="more"
-                        data-bd-bind="1543916062744">分享</a>
-                    <script>
-                        window._bd_share_config = {
-                            "common": {
-                                "bdSnsKey": {},
-                                "bdText": "",
-                                "bdMini": "2",
-                                "bdMiniList": false,
-                                "bdPic": "",
-                                "bdStyle": "0",
-                                "bdSize": "16"
-                            },
-                            "share": {}
-                        };
-                        with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script'))
-                            .src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' +
-                            ~(-new Date() / 36e5)];
-                    </script>
-
-                    <a href="javascript:" class="prod_collect favorite">收藏</a>
-                    <a href="javascript:" class="prod_consult">
-                    </a>
+            </ul>
+        </div>
+        <!-- main product list end-->
+        <!-- 分页 -->
+        <div class="pages">
+            <a href="" class="pages_prev">&lt;</a>
+            <a href="prefecture1.html?page=1" >1</a>
+            <a href="prefecture1.html?page=2">2</a>
+            <a href="" class="pages_next">&gt;</a>
+            <span>共2页，跳转到:</span>
+            <input id="pageindex" type="text">
+            <input type="button" id="btngopage" value="确定">
+        </div>
+        <!-- 购物车 -->
+        
+    </div>
+    <div class="shopCar">
+        <div class="sc_right">
+            <div class="sc_pic">
+                <span>结算</span>
+                <!-- 购物车内商品的数量 -->
+                <div class="sc_num">
+                    0
                 </div>
             </div>
-
-            <div class="prod_buy">
-                <h2></h2>
-                <p></p>
-                <!-- <h2>战神Z7M-KP5GC</h2> -->
-                <!-- <p>Windows 10 家庭版/15.6英寸IPS/GeForce® GTX1050 Ti 4G/i5-8300H/8G/128G+1TB</p> -->
-                <div class="prod_price">
-                    <span>商城价：</span>
-                    <b></b>
-                    <!-- <b>￥5999.00</b> -->
-                    <div class="prod_pri_r">
-                        <p>月销量：<i></i></p>
-                        <p>累计评论：<i></i></p>
-                    </div>
-                </div>
-                <dl class="versions">
-                    <dt>选择版本：</dt>
-                    <dd>
-                        <ul>
-            
-                        </ul>
-                    </dd>
-                </dl>
-                <dl class="color"><dt>选择颜色：</dt>
-                    <dd>
-                        <ul class="pro_attr" attrname="颜色">
-                            <li class="cur"><a href="" currid="4"></a></li>
-                        </ul>
-                    </dd>
-                </dl>
-                <dl class="packages"><dt>选择套餐：</dt>
-                    <dd>
-                        <ul class="pro_attr" attrname="套餐">
-                            <li class="cur"><a href="" currid="23">官方标配</a></li>
-                        </ul>
-                    </dd>
-                </dl>
-                <dl class="prod_dl_stock">
-                    <dt>数&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;量：</dt>
-                    <dd>
-                        <input type="text" value="1">
-                        <span><b class="prod_dl_bt"></b><b class="prod_dl_bb"></b></span>件
-                        <span></span>库存<b class="prod_stock_num"></b>件</dd>
-                </dl>
-                <dl>
-                    <dt>服务承诺：</dt>
-                    <dd><span class="prod_dl_sp1">官方品质保障</span><span class="prod_dl_sp2">售后维修保障</span><span class="prod_dl_sp3">7天退货
-                            15天换货</span></dd>
-                </dl>
-                <dl>
-                    <dd><a href="javascript:" class="prod_dl_a1">立即购买</a><a href="javascript:" class="prod_dl_a2">加入购物车</a></dd>
-                </dl>
+    
+            <ul>
+                
+            </ul>
+            <div class="clearShopCar">
+                <button id="clearBtn">清空</button>
             </div>
         </div>
     </div>
-    <!-- mian start -->
-    <!-- main end -->
+
+    <!-- end main -->
     <!-- footer -->
     <div class="footerBox">
         <div class="footer">
@@ -300,7 +228,7 @@
                     <ol>
                         <li><a target="_blank" href="">神舟电脑京东官方旗舰店</a></li>
                         <li><a target="_blank" href="">神舟电脑天猫旗舰店</a></li>
-                        <li><a target="_blank" href="https://haseexz.tmall.com/">神舟新舟专卖店</a></li>
+                        <li><a target="_blank" href="">神舟新舟专卖店</a></li>
                     </ol>
                 </li>
 
@@ -308,7 +236,7 @@
                     <ol>
                         <li><a target="_blank" href="http://www.hasee.com/Chinese/about/index.aspx?cid=105001006001001">公司简介</a></li>
                         <li><a target="_blank" href="http://www.hasee.com/Chinese/hire/index.aspx?cid=105001006003001">加入我们</a></li>
-                        <li><a target="_blank" href="">联系我们</a></li>
+                        <li><a target="_blank" href="/other/detail.aspx?nc=104006004003">联系我们</a></li>
                     </ol>
                 </li>
 

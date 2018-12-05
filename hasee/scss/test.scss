@@ -422,7 +422,6 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    padding-left: 20px;
 }
 
 .footerBox .footer .foot_nav > li.ft_nav_li6 {
@@ -432,7 +431,6 @@
 .foot_nav li p {
     font-size: 12px;
     line-height: 34px;
-    color: #666;
 }
 .foot_nav li p * {
     vertical-align: middle;
@@ -440,25 +438,8 @@
 .foot_nav > li b {
     font-size: 18px;
     margin: 0 3px;
-    color: #666;
-    font-family: Arial,Microsoft YaHei,sans-serif;
 }
-.foot_nav > li:nth-child(1) > a {
-    background: url(http://www.hasee.net/images/icon2.png) no-repeat left 0;
-}
-.foot_nav > li:nth-child(2) > a {
-    background: url(http://www.hasee.net/images/icon2.png) no-repeat left -172px;
-}
-.foot_nav > li:nth-child(3) > a {
-    background: url(http://www.hasee.net/images/icon2.png) no-repeat left -333px;
-}
-.foot_nav > li:nth-child(4) > a {
-    background: url(http://www.hasee.net/images/icon2.png) no-repeat left -542px;
-}
-.foot_nav > li:nth-child(5) > a {
-    background: url(http://www.hasee.net/images/icon2.png) no-repeat left -716px;
-}
-/* foot nav end */
+
 .foot_bottom {
     text-align: left;
     height: 20px;

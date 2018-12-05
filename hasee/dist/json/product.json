@@ -1,0 +1,65 @@
+[{
+    "id":0,
+    "type":"笔记本",
+    "series":"战神系列",
+    "title": "战神Z7-KP7G",
+    "tip": "Windows 10 家庭版/15.6英寸IPS/GeForce® GTX1060 6G/i7-8750H/8G/256G",
+    "price": "7799.00",
+    "sales": "26",
+    "comments": 2,
+    "versions": [
+        "战神Z7M-KP7GE",
+        "战神Z7M-KP5SC", 
+        "战神Z7M-KP5GH", 
+        "战神Z7M-KP5GE", 
+        "战神Z7M-KP7GH", 
+        "战神Z7M-KP7S/战神Z7M-KP7GC/战神Z7M-KP7SC", 
+        "战神Z7M-KP7D/战神Z7M-KP7DC战神Z7M-KP5D/战神Z7M-KP5DC", 
+        "战神Z7M-KP5GC"
+    ],
+    "color":"黑色",
+    "package":[
+        "套餐一",
+        "套餐二"
+    ],
+    "inventory": 10,
+    "img":[
+        "http://www.hasee.net/uploadfiles/images/2018/4/2018042604513544.gif",
+        "http://www.hasee.net/uploadfiles/images/2018/4/2018042604512204.jpg",
+        "http://www.hasee.net/uploadfiles/images/2018/4/2018042604511608.jpg",
+        "http://www.hasee.net/uploadfiles/images/2018/4/2018042604512785.jpg"
+    ]
+},
+{
+    "id":1,
+    "type":"笔记本",
+    "series":"战神系列",
+    "title": "战神Z7-KP7G",
+    "tip": "Windows 10 家庭版/15.6英寸IPS/GeForce® GTX1060 6G/i7-8750H/8G/256G",
+    "price": "7799.00",
+    "sales": "26",
+    "comments": 2,
+    "versions": [
+        "战神Z7M-KP7GE",
+        "战神Z7M-KP5SC", 
+        "战神Z7M-KP5GH", 
+        "战神Z7M-KP5GE", 
+        "战神Z7M-KP7GH", 
+        "战神Z7M-KP7S/战神Z7M-KP7GC/战神Z7M-KP7SC", 
+        "战神Z7M-KP7D/战神Z7M-KP7DC战神Z7M-KP5D/战神Z7M-KP5DC", 
+        "战神Z7M-KP5GC"
+    ],
+    "color":"黑色",
+    "package":[
+        "套餐一",
+        "套餐二"
+    ],
+    "inventory": 10,
+    "img":[
+        "http://www.hasee.net/uploadfiles/images/2018/4/2018042604513544.gif",
+        "http://www.hasee.net/uploadfiles/images/2018/4/2018042604512204.jpg",
+        "http://www.hasee.net/uploadfiles/images/2018/4/2018042604511608.jpg",
+        "http://www.hasee.net/uploadfiles/images/2018/4/2018042604512785.jpg"
+    ]
+}
+]
