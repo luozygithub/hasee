@@ -626,6 +626,10 @@ a.pages_next {
   border: 1px solid #ddd;
   background: #fafafc; }
 
+.ellipsis {
+  font-size: 30px;
+  padding-bottom: 10px; }
+
 .sc_right {
   position: fixed;
   width: 270px;

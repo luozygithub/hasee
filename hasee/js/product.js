@@ -1,4 +1,4 @@
-define(['jquery'], function($){
+define(['jquery','jquery-cookie'], function($){
 
     
   
@@ -128,6 +128,22 @@ define(['jquery'], function($){
             });
            
         })
+        //计算购物车 内商品数量
+        
+        function shop_car() {
+            var sc_str = $.cookie("goods");
+            var sc_num = 0;
+            if (sc_str) { //判断字符串是否存在
+                var sc_arr = eval(sc_str);
+                for (var i in sc_arr) {
+                    sc_num = Number(sc_arr[i].num) + sc_num;
+                }
+                 
+               
+            }
+            $(".shopCarNumber").html(sc_num);  
+        }
+        shop_car();
          
     }
     return {

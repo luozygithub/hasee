@@ -1,6 +1,7 @@
 define(['jquery', 'jquery-cookie'], function ($) {
     //search data
     var productCount = 12; //一页下多少个
+    var maxPage = 999;
     //解析参数
     function parseUrl() {
 
@@ -20,9 +21,12 @@ define(['jquery', 'jquery-cookie'], function ($) {
     var v = parseUrl(); //解析所有参数
     // alert(v['id']);//就是你要的结果
     var page = v['page'];
+    //页面跳转限定
     if (page < 1) {
         page = 1;
-    } else {
+    } else if(page > maxPage){
+        page = maxPage;
+    }else{
         page = v['page'];
     }
 
@@ -43,10 +47,13 @@ define(['jquery', 'jquery-cookie'], function ($) {
                 alert("search error" + msg);
             }
         })
-        //product_list
+        //product_list 分页  每页显示固定数据
+ 
         $.ajax({
             url: "../json/productList.json",
             success: function (data) {
+                maxPage = Math.ceil(data.length/productCount);
+                $(".pages span i").append(maxPage);
                 for (let i = (page - 1) * productCount, j = 0; i < data.length && j < productCount; i++, j++) {
                     $(`
                     <li><a href="" class="pro_img">
@@ -121,6 +128,11 @@ define(['jquery', 'jquery-cookie'], function ($) {
         if (page == 2) {
             $('.pages a:eq(2)').addClass('cur');
         }
+        $("#btngopage").click(function(){
+            location.href = "prefecture1.html?page=" + $("#pageindex").val();
+        })
+
+
         //购物车
 
         // //点击清空购物车
@@ -193,7 +205,6 @@ define(['jquery', 'jquery-cookie'], function ($) {
             mouseenter  移入
             mouseleave  移出
         */
-  
         $(".sc_right").mouseenter(function () {
             $(this).stop().animate({
                 right: 0
