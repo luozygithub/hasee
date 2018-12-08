@@ -6,7 +6,9 @@ require.config({
         "jquery": 'jquery-1.11.3',
         "jquery-cookie": "jquery.cookie",
         "prefecture":"prefecture",
-        "public":"public"
+        "public":"public",
+        "parabola":"parabola",
+        "ballMove":"ballMove"
     },
 	shim: {
 		//设置依赖关系
@@ -22,6 +24,9 @@ require.config({
     // "public":{
     //     exports: "_"
     // }
+    "parabola": {
+		exports: "_"
+	}
 })
 require(['prefecture', 'public'], function(prefecture, public){
     prefecture.prefecture();

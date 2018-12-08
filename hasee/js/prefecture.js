@@ -1,4 +1,4 @@
-define(['jquery', 'jquery-cookie'], function ($) {
+define(['ballMove','jquery', 'jquery-cookie'], function (ballMove,$) {
     //search data
     var productCount = 12; //一页下多少个
     var maxPage = 999;
@@ -148,10 +148,11 @@ define(['jquery', 'jquery-cookie'], function ($) {
         //页面控件非常多，非常容易叠加，很容易造成事件冒泡
 
         $(".product_list").on("click", ".pro_shop_car", function (event) {
+            
             event = event || window.event;
             event.preventDefault();
             //抛物线运动
-            // ballMove.ballMove(this);
+            ballMove.ballMove(this);
             // alert(this.id);
             //是否是第一次添加cookie
             var id = this.id;

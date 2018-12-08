@@ -21,26 +21,29 @@ define(['jquery','jquery-cookie'],function($){
                         goodsTotalprice = 0;
                         let html = '';
                         for (var i in sc_arr) {
-                            goodsNum += sc_arr[i].num;
+                            goodsNum += parseFloat(sc_arr[i].num);
                             goodsTotalprice += sc_arr[i].num * res[sc_arr[i].id].price;
                             html += `<tr class="cartitem">
-                                <td><input name="" checked="checked" type="checkbox"></td>
-                                <td><img src="${res[sc_arr[i].id].img}">
-                                    <p><a href="" target="_blank">${res[sc_arr[i].id].title}</a></p>
-                                </td>
-                                <td>${res[sc_arr[i].id].price}</td>
-                                <td>
-                                    <div class="shop_car_tbd1">
-                                        <span class="shop_car_bl">-</span>
-                                        <input value="${sc_arr[i].num}" name="${sc_arr[i].id}" type="text">
-                                        <span  class="shop_car_br">+</span>
-                                    </div>
-                                </td>
-                                <td class="shop_car_price">${parseFloat(parseFloat(res[sc_arr[i].id].price)* parseInt(sc_arr[i].num))}</td>
-                                <td class="delete"><a class="addfavorite" href="javascript:" onclick="AddFavorite('10862',window.location.href)">移入收藏夹</a><br><a
-                                        class="delitem" href="javascript:">删除</a><input class="hdAttrinfo" value="4,23" type="hidden"><input
-                                        class="hdProid" value="10862" type="hidden"></td>
-                            </tr>`
+                                     <td><input checked="checked" type="checkbox"></td>
+                                    <td><img src="${res[sc_arr[i].id].img}">
+                                        <p><a href="" target="_blank">${res[sc_arr[i].id].title}</a></p>
+                                    </td>
+                                    <td>${res[sc_arr[i].id].price}</td>
+                                        <td>
+                                        <div class="shop_car_tbd1">
+                                            <span class="shop_car_bl">-</span>
+                                            <input value="${sc_arr[i].num}" name="${sc_arr[i].id}" type="text">
+                                            <span  class="shop_car_br">+</span>
+                                        </div>
+                                    </td>
+                                    <td class="shop_car_price">${parseFloat(parseFloat(res[sc_arr[i].id].price)* parseInt(sc_arr[i].num))}</td>
+                                     <td class="delete">
+                                        <a class="addfavorite">移入收藏夹</a><br>
+                                        <a class="delitem">删除</a>
+                                        <input class="hdAttrinfo" value="4,23" type="hidden">
+                                        <input class="hdProid" value="" type="hidden">
+                                    </td>
+                                </tr>`
                         }
                         $(".shop_car_tb table tbody").html(html);
                         $(".goodsNum").html('(' + goodsNum + ')');
@@ -66,7 +69,7 @@ define(['jquery','jquery-cookie'],function($){
                         for (var i in sc_arr) {
                             //在这个商品 的多选框被选中的时候 才计算进总数量 和总价格
                             if($(".shop_car_tb table tbody tr").eq(i).find("input[type='checkbox']").prop("checked")){
-                                goodsNum += sc_arr[i].num;
+                                goodsNum += parseFloat(sc_arr[i].num);
                                 goodsTotalprice += sc_arr[i].num * data[sc_arr[i].id].price;
                             }
                             // 修改每个商品后面的 总价
@@ -96,7 +99,7 @@ define(['jquery','jquery-cookie'],function($){
             var jsonArr = JSON.parse($.cookie('goods'));
             for(let i in jsonArr){
                 if(jsonArr[i].id == $(this).prev().attr("name")){
-                    jsonArr[i].num = jsonArr[i].num + 1;
+                    jsonArr[i].num = parseInt(jsonArr[i].num) + 1;
                     let cookieStr =  JSON.stringify(jsonArr);
                     $.cookie("goods",cookieStr,{
                         expires: 7
@@ -116,7 +119,7 @@ define(['jquery','jquery-cookie'],function($){
             }
             
             //cookie 里面的 对应id 商品的num - 1
-            var jsonArr = JSON.parse($.cookie('goods'));
+            let jsonArr = JSON.parse($.cookie('goods'));
             for(let i in jsonArr){
                 if(jsonArr[i].id == $(this).next().attr("name")){
                     if(jsonArr[i].num > 1){
@@ -142,6 +145,42 @@ define(['jquery','jquery-cookie'],function($){
                 }
             }
         })
+        //input 内值改变触发事件
+        $('.shop_car_tb table tbody').on("blur",".shop_car_tbd1 input",function(){
+            // alert($('.shop_car_tbd1 input').val())
+            //要注意 这里要改变的值 要用this去找 而不是选择器
+            if(/^[0-9]+.?[0-9]*$/.test($(this).val())){
+                var jsonArr = JSON.parse($.cookie('goods'));
+                for(let i in jsonArr){
+                    if(jsonArr[i].id == $(this).attr("name")){
+                        jsonArr[i].num = $(this).val();
+                        let cookieStr =  JSON.stringify(jsonArr);
+                        $.cookie("goods",cookieStr,{
+                            expires: 7
+                        })
+                        sg_refresh();
+                        
+                    }
+                }
+            }else{
+                $(this).val(1);
+                var jsonArr = JSON.parse($.cookie('goods'));
+                for(let i in jsonArr){
+                    if(jsonArr[i].id == $(this).attr("name")){
+                        jsonArr[i].num = $('.shop_car_tbd1 input').val();
+                        let cookieStr =  JSON.stringify(jsonArr);
+                        $.cookie("goods",cookieStr,{
+                            expires: 7
+                        })
+                        sg_refresh();
+                    }
+                }
+            }
+        })
+        $('.shop_car_tbd1 input').blur(function(){
+            alert($('.shop_car_tbd1 input').val())
+        })
+        //全选
         $('.CheckAll').click(function(){
             // alert($(this).attr("checked"));
             // prop  jq1.6 以后建议用prop  可获取 当前checked状态
@@ -151,7 +190,9 @@ define(['jquery','jquery-cookie'],function($){
             }else{
                 $('.cartitem input[type="checkbox"]').prop("checked",false);
                 $('.CheckAll').prop("checked",false);
+
             }
+            sg_refresh();
         })
         $('.main').on('click','.cartitem input[type="checkbox"]',function(){
             if($(this).prop("checked")){
@@ -162,6 +203,25 @@ define(['jquery','jquery-cookie'],function($){
                 sg_refresh();
             }
         })
+        //删除商品
+        $('.main table').on("click",".delitem",function(ev){
+            ev.preventDefault();
+            let jsonArr = JSON.parse($.cookie('goods'));
+            for(let i in jsonArr){
+                //
+                if(jsonArr[i].id == $(this).parent().parent().find("input[name]").attr("name")){
+                    jsonArr.splice(i,1);
+                }
+            }
+            let cookieStr =  JSON.stringify(jsonArr);
+            $.cookie("goods",cookieStr,{
+                expires: 7
+            })
+            $(this).parents(".cartitem").remove();
+            sg_refresh();
+
+        })
+        
     }
     return {
         cart: cart
